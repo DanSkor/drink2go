@@ -1,0 +1,29 @@
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort__span {
+  margin: 0;
+}
+
+.sort__select {
+  font-family: $montserrat-semibold;
+  font-size: 16px;
+  line-height: 150%;
+  color: $base-primary;
+  padding: 4px 30px 4px 10px;
+  width: 165px;
+  border: none;
+  background-color: $bg-lightest-grey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("../../icons/stack.svg#icon-select-arrow");
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  background-size: 10px 6px;
+  cursor: pointer;
+}

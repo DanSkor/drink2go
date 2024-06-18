@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $montserrat-regular;
+  font-size: 16px;
+  line-height: 150%;
+  color: $base-white;
+  background-color: $base-primary;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &--secondary {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+}

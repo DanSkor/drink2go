@@ -1,0 +1,152 @@
+.filter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.filter__field {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__field-title {
+  font-family: $montserrat-semibold;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0 0 20px;
+}
+
+.filter__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.filter__slider-span {
+  font-size: 18px;
+  color: $base-grey;
+}
+
+.filter__slider-input {
+  font-family: $montserrat-medium;
+  font-size: 16px;
+  line-height: 150%;
+  color: $base-black;
+  text-align: center;
+  width: 118px;
+  height: 40px;
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background-color: $base-white;
+
+  &::placeholder {
+    color: $base-grey;
+  }
+}
+
+.filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter__span {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.filter__label {
+  display: flex;
+  gap: 10px;
+}
+
+.filter__mark--radio {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: 2px solid $base-grey;
+  transition: all 0.2s ease;
+
+  &::after {
+    transition: all 0.2s ease;
+  }
+}
+
+.filter__input[type="radio"]:checked + .filter__mark--radio {
+  outline: 2px solid $base-primary;
+}
+
+.filter__input[type="radio"]:checked + .filter__mark--radio::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $base-primary;
+}
+
+.filter__input[type="radio"]:disabled + .filter__mark--radio {
+  outline: 2px solid $alt-light-grey;
+  background-color: $bg-lightest-grey;
+}
+
+.filter__input[type="radio"]:disabled ~ .filter__span {
+  color: $base-grey;
+}
+
+.filter__mark--checkbox {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $base-grey;
+  transition: all 0.2s ease;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $base-white;
+    transition: all 0.2s ease;
+  }
+}
+
+.filter__input[type="checkbox"]:checked + .filter__mark--checkbox {
+  background-color: $base-primary;
+}
+
+.filter__input[type="checkbox"]:checked + .filter__mark--checkbox::after {
+  left: 20px;
+}
+
+.filter__input[type="checkbox"]:disabled + .filter__mark--checkbox {
+  background-color: $alt-light-grey;
+}
+
+.filter__input[type="checkbox"]:disabled + .filter__mark--checkbox::after {
+  background-color: $bg-lightest-grey;
+}
+
+.filter__input[type="checkbox"]:disabled ~ .filter__span {
+  color: $base-grey;
+}
+
+.filter__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

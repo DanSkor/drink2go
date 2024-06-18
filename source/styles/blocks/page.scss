@@ -1,0 +1,16 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 143%;
+  color: $base-black;
+  background-color: $base-white;
+  margin: 0 auto;
+  height: 100%;
+}

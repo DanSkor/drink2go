@@ -1,0 +1,44 @@
+.card {
+  background-color: $base-white;
+  border-radius: 4px;
+  padding: 40px 20px 20px 18px;
+}
+
+.card__image {
+  display: block;
+  align-items: center;
+  margin: 0 auto 24px;
+}
+
+.card__title {
+  font-family: $montserrat-bold;
+  font-size: 18px;
+  line-height: 178%;
+  margin: 0 0 4px;
+}
+
+.card__desc {
+  margin: 0 0 16px;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  font-family: $montserrat-semibold;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.card__button {
+  background-image: url("../../icons/stack.svg#icon-add-to-basket");
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+  padding: 8px 20px 8px 46px;
+  background-size: 20px 16px;
+  font-size: 14px;
+  line-height: 143%;
+}

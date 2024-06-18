@@ -1,0 +1,55 @@
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 41px;
+  padding: 22px 20px 30px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__subtitle {
+  font-family: $montserrat-bold;
+  letter-spacing: 0.02em;
+  color: $base-primary;
+  margin: 0 0 12px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__link {
+  font-family: $montserrat-medium;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $base-black;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__address-location {
+  margin: 0 0 16px;
+}
+
+.footer__adress-tel {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 143%;
+  color: $base-black;
+  text-decoration: none;
+}

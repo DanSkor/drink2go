@@ -1,0 +1,13 @@
+.main-nav {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

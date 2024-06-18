@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  display: block;
+  width: 60px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.menu__link--personal-account {
+  background-image: url("../../icons/stack.svg#icon-user");
+}
+
+.menu__link--basket {
+  background-image: url("../../icons/stack.svg#icon-basket");
+}
+

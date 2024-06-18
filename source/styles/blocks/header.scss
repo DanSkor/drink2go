@@ -1,3 +1,16 @@
 .header {
+  font-family: $montserrat-medium;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $base-primary;
+}
 
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 12px 20px;
 }
