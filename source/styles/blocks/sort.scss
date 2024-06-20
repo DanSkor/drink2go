@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @media (min-width: $tablet) {
+    justify-content: end;
+  }
 }
 
 .sort__span {
@@ -17,13 +21,21 @@
   width: 165px;
   border: none;
   background-color: $bg-lightest-grey;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
   appearance: none;
   background-image: url("../../icons/stack.svg#icon-select-arrow");
   background-repeat: no-repeat;
   background-position: center right 10px;
   background-size: 10px 6px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+
+  }
 }

@@ -13,18 +13,49 @@
 
 .menu__link {
   display: block;
-  width: 60px;
-  height: 36px;
+  min-width: 60px;
+  min-height: 60px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
+
+  @media (min-width: $desctop) {
+    position: relative;
+    font-family: $montserrat-medium;
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $base-black;
+    padding: 32px 20px 32px 44px;
+    background-position: left 20px center;
+    text-decoration: none;
+
+    &::after {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .menu__link--personal-account {
   background-image: url("../../icons/stack.svg#icon-user");
+
+  @media (min-width: $desctop) {
+    &::after {
+      content: "Войти";
+    }
+  }
 }
 
 .menu__link--basket {
   background-image: url("../../icons/stack.svg#icon-basket");
+
+  @media (min-width: $desctop) {
+    &::after {
+      content: "Корзина";
+    }
+  }
 }
 

@@ -11,7 +11,7 @@
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
-        <div class="logo-wrapper">
+        <div class="header__logo-wrapper">
           <a class="header__logo logo" href="#">
             <picture>
               <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logo-desc.svg" width="170" height="36">
@@ -66,7 +66,7 @@
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
           <ol class="slider__list">
-            <li class="slider__item">
+            <li class="slider__item slider__item--first-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="./images/slider-1-desc@1x.webp 1x, ./images/slider-1-desc@2x.webp 2x" width="600" height="600">
                 <source type="image/webp" media="(min-width: 768px)" srcset="./images/slider-1-tab@1x.webp 1x, ./images/slider-1-tab@2x.webp 2x" width="476" height="476">
@@ -88,7 +88,7 @@
                 </div>
               </div>
             </li>
-            <!-- <li class="slider__item">
+            <!-- <li class="slider__item slider__item--second-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="./images/slider-2-desc@1x.webp 1x, ./images/slider-2-desc@2x.webp 2x" width="600" height="600">
                 <source type="image/webp" media="(min-width: 768px)" srcset="./images/slider-2-tab@1x.webp 1x, ./images/slider-2-tab@2x.webp 2x" width="476" height="476">
@@ -97,18 +97,20 @@
                 <source type="image/png" media="(min-width: 768px)" srcset="./images/slider-2-tab@1x.png 1x, ./images/slider-2-tab@2x.png 2x" width="476" height="476">
                 <img class="slider__image" src="./images/slider-2-mob@1x.png" srcset="./images/slider-2-mob@2x.png 2x" alt="Изображение напитка 'Лавандовый Латте'." width="280" height="280">
               </picture>
-              <p class="slider__title primary-title">Новинка!</p>
-              <h3 class="slider__name">Лавандовый Латте</h3>
-              <p class="slider__desc">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              <div class="slider__info-wrapper">
-                <div class="slider__prices">
-                  <span class="slider__old-price">285₽</span>
-                  <span class="slider__new-price">265₽</span>
+              <div class="slider__content-wrapper">
+                <p class="slider__title primary-title">Новинка!</p>
+                <h3 class="slider__name">Лавандовый Латте</h3>
+                <p class="slider__desc">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="slider__info-wrapper">
+                  <div class="slider__prices">
+                    <span class="slider__old-price">285₽</span>
+                    <span class="slider__new-price">265₽</span>
+                  </div>
+                  <a class="slider__order-button button" href="#">Заказать</a>
                 </div>
-                <a class="slider__order-button button" href="#">Заказать</a>
               </div>
             </li>
-            <li class="slider__item">
+            <li class="slider__item slider__item--third-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="./images/slider-3-desc@1x.webp 1x, ./images/slider-3-desc@2x.webp 2x" width="600" height="600">
                 <source type="image/webp" media="(min-width: 768px)" srcset="./images/slider-3-tab@1x.webp 1x, ./images/slider-3-tab@2x.webp 2x" width="476" height="476">
@@ -117,15 +119,17 @@
                 <source type="image/png" media="(min-width: 768px)" srcset="./images/slider-3-tab@1x.png 1x, ./images/slider-3-tab@2x.png 2x" width="476" height="476">
                 <img class="slider__image" src="./images/slider-3-mob@1x.png" srcset="./images/slider-3-mob@2x.png 2x" alt="Изображение напитка 'Тройной Эспрессо'." width="280" height="280">
               </picture>
-              <p class="slider__title primary-title">Новинка!</p>
-              <h3 class="slider__name">Тройной Эспрессо</h3>
-              <p class="slider__desc">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              <div class="slider__info-wrapper">
-                <div class="slider__prices">
-                  <span class="slider__old-price">395₽</span>
-                  <span class="slider__new-price">375₽</span>
+              <div class="slider__content-wrapper">
+                <p class="slider__title primary-title">Новинка!</p>
+                <h3 class="slider__name">Тройной Эспрессо</h3>
+                <p class="slider__desc">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="slider__info-wrapper">
+                  <div class="slider__prices">
+                    <span class="slider__old-price">395₽</span>
+                    <span class="slider__new-price">375₽</span>
+                  </div>
+                  <a class="slider__order-button button" href="#">Заказать</a>
                 </div>
-                <a class="slider__order-button button" href="#">Заказать</a>
               </div>
             </li> -->
           </ol>
@@ -188,7 +192,7 @@
                   <div class="filter__input-wrapper">
                     <label class="visually-hidden" for="min-price">Минимальная цена.</label>
                     <input class="filter__slider-input" type="number" min="0" name="min-price" id="min-price" placeholder="0">
-                    <span class="filter__slider-span">-</span>
+                    <!-- <span class="filter__slider-span">-</span> -->
                     <label class="visually-hidden" for="max-price">Максимальная цена.</label>
                     <input class="filter__slider-input" type="number" min="0" name="max-price" id="max-price" value="900">
                   </div>
@@ -219,7 +223,7 @@
                     </li>
                     <li class="filter__item">
                       <label class="filter__label">
-                        <input class="filter__input visually-hidden" type="radio" name="milk-availability" value="without-milk" disabled>
+                        <input class="filter__input visually-hidden" type="radio" name="milk-availability" value="without-milk" checked disabled>
                         <span class="filter__mark filter__mark--radio"></span>
                         <span class="filter__span">Без молока</span>
                       </label>
@@ -395,11 +399,13 @@
         <div class="footer__wrapper">
           <div class="footer__social social">
             <h3 class="visually-hidden">Социальные сети.</h3>
-            <picture>
-              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logo-desc.svg" width="170" height="36">
-              <img class="social__logo logo__image" src="./images/logo-tab.svg" alt="Логотип интернет-мазанина 'Drink 2 Go'." width="82" height="36">
-            </picture>
-            <p class="social__title">Интернет-магазин кофейных напитков</p>
+            <div class="social__logo-wrapper">
+              <picture>
+                <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo-desc.svg" width="170" height="36">
+                <img class="social__logo logo__image" src="./images/logo-tab.svg" alt="Логотип интернет-мазанина 'Drink 2 Go'." width="82" height="36">
+              </picture>
+              <p class="social__title">Интернет-магазин кофейных напитков</p>
+            </div>
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="https://vk.com/htmlacademy" rel="noopener" target="_blank">

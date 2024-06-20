@@ -12,9 +12,36 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $alt-primary-lighter;
+  }
+
+  &:active {
+    background-color: $alt-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
 
   &--secondary {
     background-color: $base-white;
     color: $base-primary;
+
+    &:hover,
+    &:focus {
+      color: $base-white;
+    }
+
+    &:active {
+      color: $base-white;
+    }
+
+    &:disabled {
+      background-color: $alt-light-grey;
+    }
   }
 }

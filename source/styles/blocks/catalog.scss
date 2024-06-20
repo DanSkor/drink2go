@@ -4,11 +4,29 @@
 
 .catalog__wrapper {
   padding: 50px 20px 44px;
+
+  @media (min-width: $tablet) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desctop) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog__columns-wrapper {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
+
+  @media (min-width: $tablet) {
+    gap: 44px;
+  }
+
+  @media (min-width: $desctop) {
+    grid-template-columns: 318px 1fr;
+    gap: 30px;
+  }
 }
 
 .catalog__title {
@@ -19,10 +37,18 @@
 .catalog__subtitile {
   text-align: center;
   margin: 0 0 20px;
+
+  @media (min-width: $desctop) {
+    margin: 0 0 40px;
+  }
 }
 
 .catalog__sort {
   margin-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 26px;
+  }
 }
 
 .catalog__list {
@@ -32,6 +58,17 @@
   margin: 0 0 40px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 0 70px;
+  }
+
+  @media (min-width: $desctop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 0 60px;
+  }
 }
 
 .catalog__pagination-list {
@@ -41,29 +78,96 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    justify-content: end;
+  }
 }
 
 .catalog__pagination-button {
   min-height: 40px;
   min-width: 40px;
   padding: 8px;
+
+  &--previous,
+  &--next {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      mask-image: url("../../icons/stack.svg#icon-pagination-arrow");
+      mask-repeat: no-repeat;
+      background-color: $base-primary;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      &::before {
+        background-color: $base-white;
+      }
+    }
+  }
+
+  &--current {
+    background-color: $bg-lightest-grey;
+    font-family: $montserrat-semibold;
+    color: $base-black;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $bg-lightest-grey;
+      color: $base-black;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      mask-image: none;
+      background-color: transparent;
+    }
+  }
 }
 
-.catalog__pagination-button--previous,
-.catalog__pagination-button--next {
-  background-image: url("../../icons/stack.svg#icon-pagination-arrow");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 10px;
+.catalog__pagination-button--previous {
+  @media (min-width: $tablet) {
+    position: relative;
+    background-image: none;
+    padding: 8px 20px;
+
+    &::after {
+      position: relative;
+      content: "Назад";
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .catalog__pagination-button--next {
   transform: rotate(180deg);
+
+  @media (min-width: $tablet) {
+    position: relative;
+    background-image: none;
+    transform: rotate(0);
+    padding: 8px 20px;
+
+    &::after {
+      position: relative;
+      content: "Вперед";
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
-.catalog__pagination-button--current {
-  background-color: $bg-lightest-grey;
-  font-family: $montserrat-semibold;
-  color: $base-black;
-  cursor: default;
-}

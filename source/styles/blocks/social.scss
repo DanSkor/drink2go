@@ -1,8 +1,36 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    grid-column: 1/4;
+  }
+
+  @media (min-width: $tablet) {
+    grid-column: 1/2;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+}
+
+.social__logo-wrapper {
+  @media (min-width: $desctop) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 .social__title {
   display: none;
 
   @media (min-width: $desctop) {
     display: block;
+    font-size: 14px;
+    line-height: 143%;
+    margin: 0;
   }
 }
 
@@ -26,5 +54,26 @@
   align-items: center;
   width: 40px;
   height: 40px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $alt-primary-opacity;
+  }
+}
+
+.social__link svg path {
+  transition: all 0.2s ease;
+}
+
+.social__link:hover svg path,
+.social__link:focus svg path,
+.social__link:active svg path {
+  fill: $base-primary;
 }
 

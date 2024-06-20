@@ -1,13 +1,21 @@
 .card {
   background-color: $base-white;
   border-radius: 4px;
-  padding: 40px 20px 20px 18px;
+  padding: 40px 20px 20px;
+
+  @media (min-width: $tablet) {
+    padding: 50px 30px 30px;
+  }
 }
 
 .card__image {
   display: block;
   align-items: center;
   margin: 0 auto 24px;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 30px;
+  }
 }
 
 .card__title {
@@ -15,10 +23,20 @@
   font-size: 18px;
   line-height: 178%;
   margin: 0 0 4px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0 0 10px;
+  }
 }
 
 .card__desc {
   margin: 0 0 16px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 20px;
+  }
 }
 
 .card__price-wrapper {

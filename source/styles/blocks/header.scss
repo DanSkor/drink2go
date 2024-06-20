@@ -10,7 +10,16 @@
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 0 20px;
+}
+
+.header__logo-wrapper {
+  @media (min-width: $desctop) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 }
