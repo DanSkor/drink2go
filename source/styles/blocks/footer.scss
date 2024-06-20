@@ -43,6 +43,15 @@
   color: $base-black;
   text-decoration: none;
   padding: 8px 0;
+
+  &:hover,
+  &:focus {
+    color: $alt-primary-lighter;
+  }
+
+  &:active {
+    color: $alt-primary-darker;
+  }
 }
 
 .footer__address {
@@ -84,6 +93,15 @@
     height: 16px;
     background-image: url("../../icons/stack.svg#icon-phone");
     background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    color: $alt-primary-lighter;
+  }
+
+  &:active {
+    color: $alt-primary-darker;
   }
 }
 

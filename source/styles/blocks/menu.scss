@@ -12,15 +12,40 @@
 }
 
 .menu__link {
+  position: relative;
   display: block;
   min-width: 60px;
   min-height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
+  transition: all 0.2s ease;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    mask-repeat: no-repeat;
+    transition: all 0.2s ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $base-primary;
+  }
+
+  &:active {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
 
   @media (min-width: $desctop) {
-    position: relative;
     font-family: $montserrat-medium;
     font-size: 12px;
     line-height: 133%;
@@ -36,12 +61,14 @@
       top: 0;
       left: 0;
     }
+
+    &::before {
+      left: 20px;
+    }
   }
 }
 
 .menu__link--personal-account {
-  background-image: url("../../icons/stack.svg#icon-user");
-
   @media (min-width: $desctop) {
     &::after {
       content: "Войти";
@@ -49,9 +76,12 @@
   }
 }
 
-.menu__link--basket {
-  background-image: url("../../icons/stack.svg#icon-basket");
+.menu__link--personal-account::before {
+  mask-image: url("../../icons/stack.svg#icon-user");
+  background-color: $base-black;
+}
 
+.menu__link--basket {
   @media (min-width: $desctop) {
     &::after {
       content: "Корзина";
@@ -59,3 +89,7 @@
   }
 }
 
+.menu__link--basket::before {
+  mask-image: url("../../icons/stack.svg#icon-basket");
+  background-color: $base-black;
+}

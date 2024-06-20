@@ -105,15 +105,6 @@
       mask-repeat: no-repeat;
       background-color: $base-primary;
     }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:disabled {
-      &::before {
-        background-color: $base-white;
-      }
-    }
   }
 
   &--current {
@@ -135,6 +126,15 @@
       mask-image: none;
       background-color: transparent;
     }
+  }
+}
+
+.catalog__pagination-button:hover::before,
+.catalog__pagination-button:focus::before,
+.catalog__pagination-button:active::before,
+.catalog__pagination-button:disabled::before {
+  @media (max-width: 767px) {
+    background-color: $base-white;
   }
 }
 
