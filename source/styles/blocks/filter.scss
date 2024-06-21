@@ -59,6 +59,18 @@
   }
 }
 
+.filter__slider {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desctop) {
+    margin-bottom: 32px;
+  }
+}
+
 .filter__slider-span {
   font-size: 18px;
   color: $base-grey;
@@ -139,6 +151,18 @@
     outline: 2px solid $alt-primary-lighter;
     outline-offset: -2px;
   }
+
+  &:hover .filter__input[type="radio"]:disabled + .filter__mark--radio::before {
+    background-color: transparent;
+  }
+
+  &:hover .filter__input[type="radio"]:checked:disabled + .filter__mark--radio::before {
+    background-color: $alt-light-grey;
+  }
+
+  &:hover .filter__input[type="checkbox"]:disabled + .filter__mark--checkbox {
+    outline: none;
+  }
 }
 
 .filter__mark--radio {
@@ -149,6 +173,18 @@
   border-radius: 50%;
   outline: 2px solid $base-grey;
   transition: all 0.2s ease;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+  }
 }
 
 .filter__input[type="radio"]:checked + .filter__mark--radio {
@@ -156,15 +192,11 @@
 }
 
 .filter__input[type="radio"]:checked + .filter__mark--radio::before {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: $base-primary;
+}
+
+.filter__input[type="radio"]:checked:disabled + .filter__mark--radio::before {
+  background-color: $alt-light-grey;
 }
 
 .filter__input[type="radio"]:disabled + .filter__mark--radio {
@@ -172,21 +204,9 @@
   background-color: $bg-lightest-grey;
 }
 
-.filter__input[type="radio"]:checked:disabled + .filter__mark--radio::before {
-  background-color: $bg-lightest-grey;
-}
-
 .filter__input[type="radio"]:disabled ~ .filter__span {
   color: $base-grey;
 }
-
-
-
-
-
-
-
-
 
 .filter__mark--checkbox {
   position: relative;
@@ -217,12 +237,13 @@
   left: 20px;
 }
 
-.filter__input[type="checkbox"]:disabled + .filter__mark--checkbox {
-  background-color: $alt-light-grey;
+.filter__input[type="checkbox"]:checked:disabled + .filter__mark--checkbox::after {
+  left: 20px;
+  background-color: $base-grey;
 }
 
-.filter__input[type="checkbox"]:disabled:hover + .filter__mark--checkbox::after {
-  outline: none;
+.filter__input[type="checkbox"]:disabled + .filter__mark--checkbox {
+  background-color: $alt-light-grey;
 }
 
 .filter__input[type="checkbox"]:disabled + .filter__mark--checkbox::after {

@@ -12,5 +12,6 @@
   color: $base-black;
   background-color: $base-white;
   margin: 0 auto;
-  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
 }

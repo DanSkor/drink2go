@@ -3,7 +3,7 @@
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 @import "./common/visually-hidden.scss";
-
+@import "./../vendor/nouislider.css";
 
 /* BLOCKS */
 @import "./blocks/page.scss";
@@ -13,7 +13,7 @@
 @import "./blocks/main-nav.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/burger.scss";
-
+@import "./blocks/main.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/primary-title.scss";
 @import "./blocks/secondary-title.scss";
@@ -23,8 +23,6 @@
 @import "./blocks/filter.scss";
 @import "./blocks/sort.scss";
 @import "./blocks/card.scss";
-
 @import "./blocks/footer.scss";
 @import "./blocks/social.scss";
-
-
+@import "./../vendor/nouislider-custom.scss";

@@ -1,1 +1,4 @@
-/* в этот файл добавляет скрипты*/
+import './menu.js';
+import './slider.js';
+import './../vendor/nouislider.js';
+import './filterSlider.js';

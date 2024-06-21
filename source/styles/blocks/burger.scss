@@ -43,13 +43,13 @@
 
 .burger--active.burger {
   &::before {
-    top: 11px;
+    top: 29px;
     transform: rotate(45deg);
     margin-left: 3px;
   }
 
   &::after {
-    bottom: 11px;
+    bottom: 29px;
     transform: rotate(-45deg);
     margin-left: 3px;
   }
@@ -67,5 +67,5 @@
 }
 
 .burger--active .burger__span {
-  transform: translate(100%, -50%);
+  transform: translate(300%, -50%);
 }
