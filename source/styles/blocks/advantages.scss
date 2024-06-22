@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desctop) {
-    padding: 100px 40px 120px;
+    padding: 97px 40px 120px;
   }
 }
 
@@ -46,7 +46,7 @@
 
   @media (min-width: $desctop) {
     padding: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 318px 317px 318px 317px;
     gap: 30px;
   }
 }
@@ -79,12 +79,7 @@
   }
 
   @media (min-width: $desctop) {
-    padding: 72px 0 0;
-
-
-    &::after {
-
-    }
+    padding: 76px 0 0;
   }
 }
 
@@ -130,6 +125,11 @@
 
   @media (min-width: $tablet) {
     font-size: 16px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $desctop) {
+    font-size: 14px;
     line-height: 150%;
   }
 }

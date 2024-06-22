@@ -9,6 +9,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  max-width: 180px;
+
+  @media (min-width: $desctop) {
+    max-width: 300px;
+    gap: 20px;
+  }
 }
 
 .menu__link {
@@ -63,7 +69,7 @@
     }
 
     &::before {
-      left: 20px;
+      left: 28px;
     }
   }
 }

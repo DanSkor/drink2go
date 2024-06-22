@@ -9,8 +9,8 @@ noUiSlider.create(slider, {
   start: [0, 900],
   connect: true,
   range: {
-      'min': 0,
-      'max': 1000
+    'min': 0,
+    'max': 1000
   },
   format: {
     to: function (value) {
@@ -29,10 +29,10 @@ slider.noUiSlider.on('update', () => {
 
 minValue.addEventListener('input', (evt) => {
   const res = evt.target.value;
-  slider.noUiSlider.set([res, ]);
+  slider.noUiSlider.set([res, maxValue.value]);
 });
 
 maxValue.addEventListener('input', (evt) => {
   const res = evt.target.value;
-  slider.noUiSlider.set([ , res]);
+  slider.noUiSlider.set([minValue.value, res]);
 });

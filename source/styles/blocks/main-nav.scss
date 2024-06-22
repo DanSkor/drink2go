@@ -45,6 +45,13 @@
   @media (min-width: $tablet) {
     flex-flow: wrap row;
     width: auto;
+    justify-content: center;
+    max-width: 400px;
+  }
+
+  @media (min-width: $desctop) {
+    max-width: 600px;
+    gap: 20px;
   }
 }
 

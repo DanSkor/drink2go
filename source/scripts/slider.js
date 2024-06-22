@@ -8,11 +8,9 @@ const slider = document.querySelector('.slider');
 let sliderCount = 0;
 let sliderWidth = 0;
 
-window.addEventListener('resize', showSlide);
-
 const rollSlider = () => {
   sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
-}
+};
 
 const disableButton = () => {
   sliderButtonNext.disabled = false;
@@ -23,24 +21,28 @@ const disableButton = () => {
   if (sliderCount === slides.length - 1) {
     sliderButtonNext.disabled = true;
   }
-}
+};
 
 disableButton();
 
 const thisSlide = (index) => {
-  sliderDots.forEach(item => item.classList.remove('slider__pagination-button--current'));
+  sliderDots.forEach((item) => item.classList.remove('slider__pagination-button--current'));
   sliderDots[index].classList.add('slider__pagination-button--current');
-}
+};
 
 const showSlide = () => {
   sliderWidth = slider.offsetWidth;
-  sliderLine.style.width = sliderWidth * slides.length + 'px';
-  slides.forEach(item => item.style.width = sliderWidth + 'px');
+  sliderLine.style.width = `${sliderWidth * slides.length}px`;
+  slides.forEach((item) => {
+    item.style.width = `${sliderWidth}px`;
+  });
 
   rollSlider();
-}
+};
 
 showSlide();
+
+window.addEventListener('resize', showSlide);
 
 const nextSlide = () => {
   sliderCount++;
@@ -52,7 +54,7 @@ const nextSlide = () => {
   disableButton();
   rollSlider();
   thisSlide(sliderCount);
-}
+};
 
 const prevSlide = () => {
   sliderCount--;
@@ -64,7 +66,7 @@ const prevSlide = () => {
   disableButton();
   rollSlider();
   thisSlide(sliderCount);
-}
+};
 
 sliderDots.forEach((dot, index) => {
   dot.addEventListener('click', ()=> {
@@ -72,8 +74,8 @@ sliderDots.forEach((dot, index) => {
     rollSlider();
     thisSlide(sliderCount);
     disableButton();
-  })
-})
+  });
+});
 
 sliderButtonPrev.addEventListener('click', prevSlide);
 sliderButtonNext.addEventListener('click', nextSlide);
