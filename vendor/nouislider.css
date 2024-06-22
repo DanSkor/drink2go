@@ -88,8 +88,21 @@
  .noUi-horizontal .noUi-handle {
    width: 24px;
    height: 24px;
-   right: -20px;
+   right: -24px;
    top: -11px;
+ }
+ .noUi-horizontal .noUi-handle-upper {
+  right: -8px;
+ }
+ @media (min-width: 768px) {
+  .noUi-horizontal .noUi-handle-upper {
+    right: -2px;
+  }
+ }
+ @media (min-width: 1440px) {
+  .noUi-horizontal .noUi-handle-upper {
+    right: -12px;
+  }
  }
  .noUi-vertical {
    width: 18px;
