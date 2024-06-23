@@ -1,5 +1,6 @@
 .slider {
   text-align: center;
+  background: $bg-flat-white;
 
   @media (min-width: $desctop) {
     text-align: start;
@@ -9,6 +10,11 @@
 .slider__wrapper {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width: $desctop) {
+    width: $desctop;
+  }
 }
 
 .slider__list {
@@ -38,36 +44,24 @@
   &--first-slide {
     background: $bg-flat-white;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       background: linear-gradient($bg-flat-white 0%, $bg-flat-white 77%, $base-white 77%, $base-white 100%);
-    }
-
-    @media (min-width: $desctop) {
-      background: $bg-flat-white;
     }
   }
 
   &--second-slide {
     background: $bg-lavender-latte;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       background: linear-gradient($bg-lavender-latte 0%, $bg-lavender-latte 77%, $base-white 77%, $base-white 100%);
-    }
-
-    @media (min-width: $desctop) {
-      background: $bg-lavender-latte;
     }
   }
 
   &--third-slide {
     background: $bg-espresso;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       background: linear-gradient($bg-espresso 0%, $bg-espresso 77%, $base-white 77%, $base-white 100%);
-    }
-
-    @media (min-width: $desctop) {
-      background: $bg-espresso;
     }
   }
 }

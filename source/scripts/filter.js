@@ -2,7 +2,6 @@ const slider = document.querySelector('.filter__slider');
 const minValue = document.querySelector('.filter__slider-input--min');
 const maxValue = document.querySelector('.filter__slider-input--max');
 
-minValue.value = 0;
 maxValue.value = 900;
 
 noUiSlider.create(slider, {

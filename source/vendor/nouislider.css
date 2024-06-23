@@ -158,14 +158,17 @@
    border-radius: 50%;
  }
 
- .noUi-handle:hover::before {
+ .noUi-handle:hover::before,
+ .noUi-handle:focus::before {
   background-color: rgba(120, 89, 207, 0.25);
  }
-
+ .noUi-handle:focus {
+  border: 2px solid #9070ec;
+  outline: none;
+ }
  .noUi-handle:active::before {
   background-color: #7859cf;
  }
-
  .noUi-vertical .noUi-handle:before,
  .noUi-vertical .noUi-handle:after {
    width: 14px;

@@ -12,6 +12,16 @@ const rollSlider = () => {
   sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
 };
 
+const setBgColor = (number) => {
+  switch (number) {
+    case 0: slider.style.background = '#f3ebe1';
+      break;
+    case 1: slider.style.background = '#eae6fc';
+      break;
+    case 2: slider.style.background = '#e5e6e8';
+  }
+};
+
 const disableButton = () => {
   sliderButtonNext.disabled = false;
   sliderButtonPrev.disabled = false;
@@ -51,6 +61,7 @@ const nextSlide = () => {
     sliderCount = slides.length - 1;
   }
 
+  setBgColor(sliderCount);
   disableButton();
   rollSlider();
   thisSlide(sliderCount);
@@ -63,6 +74,7 @@ const prevSlide = () => {
     sliderCount = 0;
   }
 
+  setBgColor(sliderCount);
   disableButton();
   rollSlider();
   thisSlide(sliderCount);

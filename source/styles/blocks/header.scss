@@ -17,6 +17,7 @@
   padding: 0 20px;
 
   @media (min-width: $desctop) {
+    width: $desctop;
     padding: 0 40px;
   }
 }
@@ -44,5 +45,20 @@
 
   @media (min-width: $tablet) {
     margin-right: 0;
+  }
+}
+
+.header__logo-title {
+  display: none;
+
+  @media (min-width: $desctop) {
+    font-family: $montserrat-regular;
+    font-size: 12px;
+    line-height: 133%;
+    color: $base-black;
+    display: block;
+    width: 140px;
+    text-transform: none;
+    margin: 0;
   }
 }

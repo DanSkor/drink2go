@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 41px;
+  margin: 0 auto;
   padding: 20px 20px 30px;
 
   @media (min-width: $tablet) {
@@ -11,6 +12,7 @@
   }
 
   @media (min-width: $desctop) {
+    width: $desctop;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px 30px;
     padding: 40px;
@@ -54,6 +56,21 @@
   &:active {
     color: $alt-primary-darker;
   }
+}
+
+// Класс для состояния disabled
+.footer__link--disabled,
+.footer__link--disabled:hover,
+.footer__link--disabled:active {
+  cursor: default;
+  color: $base-grey;
+}
+
+.footer__adress-tel--disabled,
+.footer__adress-tel--disabled:hover,
+.footer__adress-tel--disabled:active {
+  cursor: default;
+  color: $base-grey;
 }
 
 .footer__address {
@@ -187,7 +204,7 @@
 .footer__shop,
 .footer__media,
 .footer__contacts {
-  @media (min-width: $tablet) {
+  @media (min-width: $desctop) {
     margin-top: 6px;
   }
 }

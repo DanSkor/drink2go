@@ -49,7 +49,7 @@
     gap: 48px;
 
     &::after {
-      left: 107px;
+      left: 111px;
     }
   }
 
@@ -118,6 +118,10 @@
   appearance: none;
 }
 
+.filter__slider-input[type="number"] {
+  appearance: textfield;
+}
+
 .filter__list {
   display: flex;
   flex-direction: column;
@@ -148,7 +152,7 @@
   }
 
   &:hover .filter__mark--checkbox,
-  &:focus .filter__mark--checkbox {
+  &:focus-within .filter__mark--checkbox {
     background-color: $alt-primary-opacity;
     outline: 2px solid $alt-primary-lighter;
     outline-offset: -2px;

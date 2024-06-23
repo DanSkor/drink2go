@@ -1,6 +1,6 @@
 @keyframes nav-appearance {
   from {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 
   to {
@@ -100,6 +100,10 @@
 
 .main-nav__item:last-child .main-nav__link {
   border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+  }
 }
 
 .main-nav__link--current {

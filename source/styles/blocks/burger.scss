@@ -69,3 +69,17 @@
 .burger--active .burger__span {
   transform: translate(300%, -50%);
 }
+
+// Класс для состояния disabled
+.burger--disabled {
+  cursor: default;
+
+  &::before,
+  &::after {
+    background-color: $alt-light-grey;
+  }
+}
+
+.burger--disabled .burger__span {
+  background-color: $alt-light-grey;
+}
